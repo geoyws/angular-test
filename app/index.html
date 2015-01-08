@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="demo">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body>
+	<div class="col-md-8" ng-controller="personController">
+        Search: <input ng-model="query">
+		<table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Nationality</th>
+                <th>Occupation</th>
+                <th>Country of Residence</th>
+            </tr>
+		    <tr ng-repeat="person in persons | filter:query">
+                <td>{{ person.firstName }}</td>
+                <td>{{ person.lastName }}</td>
+                <td>{{ person.dateOfBirth }}</td>
+                <td>{{ person.nationality }}</td>
+                <td>{{ person.occupation }}</td>
+                <td>{{ person.cityOfResidence }}</td>
+		    </tr>
+		</table>
+	</div>
+    <div class="col-md-4">{{4+5}}</div>
+
+</body>
+</html>

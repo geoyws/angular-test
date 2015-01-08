@@ -1,0 +1,11 @@
+﻿body {
+}
+
+input[ng-model="query"] {
+    margin: 50px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
